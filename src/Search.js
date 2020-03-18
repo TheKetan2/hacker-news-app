@@ -1,9 +1,9 @@
 import React from "react";
 
 const Search = props => {
-  const { value, onChange, children } = props;
+  const { value, onChange, onSubmit, children } = props;
   return (
-    <form>
+    <form onSubmit={onSubmit}>
       {children}
       <input type="text" value={value} onChange={onChange} />
     </form>
